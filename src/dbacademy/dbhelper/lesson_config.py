@@ -248,7 +248,7 @@ class LessonConfig:
         """
         :return: the current user's name as determined by invoking "SELECT current_user()" in the consumer's workspace.
         """
-        return self.__username
+        return to_clean_lesson_name(self.__username)
 
     @property
     def create_catalog(self) -> bool:
